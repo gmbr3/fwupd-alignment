@@ -7,3 +7,8 @@
 	docker run --rm --it \
 		--mount source=yocto-vol,target=/home/yocto/poky/build \
 		fwupd:latest
+
+# Cleanup
+
+	docker rmi fwupd
+	docker volume rm yocto-vol
