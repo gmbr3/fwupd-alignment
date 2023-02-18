@@ -1,0 +1,6 @@
+#!/bin/sh
+
+. ./oe-init-build-env
+bitbake-layers add-layer /home/yocto/poky/meta-openembedded/meta-oe
+bitbake fwupd-efi
+sbverify /home/yocto/poky/build/tmp/work/core2-64-poky-linux/fwupd-efi/1.2-r0/image/usr/libexec/fwupd/efi/fwupdx64.efi

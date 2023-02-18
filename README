@@ -1,0 +1,9 @@
+# Build container
+
+	docker build -t fwupd:latest .
+
+# Run container
+
+	docker run --rm --it \
+		--mount source=yocto-vol,target=/home/yocto/poky/build \
+		fwupd:latest
