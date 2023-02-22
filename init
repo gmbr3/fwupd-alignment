@@ -4,3 +4,5 @@
 bitbake-layers add-layer /home/yocto/poky/meta-openembedded/meta-oe
 bitbake fwupd-efi
 sbverify /home/yocto/poky/build/tmp/work/core2-64-poky-linux/fwupd-efi/1.2-r0/image/usr/libexec/fwupd/efi/fwupdx64.efi
+wget -O fwupdx64.efi.gmbr3 https://github.com/gmbr3/fwupd-efi/raw/binary-check/fwupdx64.efi
+sbverify ./fwupdx64.efi.gmbr3
