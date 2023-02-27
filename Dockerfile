@@ -33,7 +33,7 @@ RUN apt-get update && \
 RUN useradd -m -u 1000 yocto
 USER yocto
 WORKDIR /home/yocto
-RUN git clone -b kirkstone https://git.yoctoproject.org/poky
+RUN git clone -b bob/fwupd https://github.com/gmbr3/poky
 WORKDIR poky
 RUN git clone -b kirkstone https://git.openembedded.org/meta-openembedded
 RUN mkdir build
